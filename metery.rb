@@ -5,21 +5,21 @@
 class Metery < Formula
   desc "Self-hosted usage-billing and entitlements backend"
   homepage "https://github.com/meterysh/metery"
-  version "0.1.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/meterysh/metery/releases/download/v0.1.0/metery_0.1.0_darwin_amd64.tar.gz"
-      sha256 "02f07a2eceec609478d2eb02df3ba201f3d1161b85f900d370b300e389ef6dd6"
+      url "https://github.com/meterysh/metery/releases/download/v0.2.0/metery_0.2.0_darwin_amd64.tar.gz"
+      sha256 "5c8cd10bfc1eb301e99fb69a53ff4b2ebe24cf64808ee64ea72233969b9bb855"
 
       define_method(:install) do
         bin.install "metery"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/meterysh/metery/releases/download/v0.1.0/metery_0.1.0_darwin_arm64.tar.gz"
-      sha256 "52cf96ed0a524ba10305d595ea368aa6832c92dcc04c415843192b85a3697e0a"
+      url "https://github.com/meterysh/metery/releases/download/v0.2.0/metery_0.2.0_darwin_arm64.tar.gz"
+      sha256 "d70f506cfa09936cc89cd224004a3ddf775869709ef049d5db2de65531b0329b"
 
       define_method(:install) do
         bin.install "metery"
@@ -29,15 +29,15 @@ class Metery < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/meterysh/metery/releases/download/v0.1.0/metery_0.1.0_linux_amd64.tar.gz"
-      sha256 "afbb49f826f819b6b063de798c46d38a91ed31dd085e3d8bb574a0f236c267cd"
+      url "https://github.com/meterysh/metery/releases/download/v0.2.0/metery_0.2.0_linux_amd64.tar.gz"
+      sha256 "c7ceea39fa6ecd02d1855dbeaac22e187cba6320d67b0cd86cdae6ec800d4c24"
       define_method(:install) do
         bin.install "metery"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/meterysh/metery/releases/download/v0.1.0/metery_0.1.0_linux_arm64.tar.gz"
-      sha256 "adbcce6809619bef3208ee46f919961511e3af79c4cf4ec62976e0e2ae9281b2"
+      url "https://github.com/meterysh/metery/releases/download/v0.2.0/metery_0.2.0_linux_arm64.tar.gz"
+      sha256 "8662784d3acd5a0dc1107ef2bb229d90532b0b4e78078b1267f5984523c9b2fc"
       define_method(:install) do
         bin.install "metery"
       end
